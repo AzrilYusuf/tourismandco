@@ -13,9 +13,9 @@ class LocationDetail extends StatelessWidget {
         children: [
           ImageBanner("assets/images/temple.jpg"),
 
-          TextSection(Colors.red),
-          TextSection(Colors.green),
-          TextSection(Colors.blue),
+          TextSection("Summary", "something1"),
+          TextSection("Details", "something2"),
+          TextSection("Reviews", "something3"),
         ],
       ),
     );
