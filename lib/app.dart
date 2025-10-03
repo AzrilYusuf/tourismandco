@@ -10,9 +10,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: LocationDetail(),
-      theme: ThemeData( // This is how to set the theme of the application
-        appBarTheme: AppBarTheme( // Set the theme of the app bar
-          titleTextStyle: fontNameDefault.copyWith(fontSize: mediumTextSize, fontWeight: FontWeight.w300),
+      theme: ThemeData(
+        // This is how to set the theme of the application
+        appBarTheme: AppBarTheme(
+          // Set the theme of the app bar
+          titleTextStyle: appBarTextStyle,
+        ),
+        textTheme: TextTheme(
+          titleLarge: titleTextStyle,
+          bodyMedium: bodyTextStyle,
         ),
       ),
     );

@@ -16,11 +16,11 @@ class TextSection extends StatelessWidget {
       children: [
         Container(
           padding: const EdgeInsets.fromLTRB(_hPadding, 32.0, _hPadding, 4.0),
-          child: Text(_title),
+          child: Text(_title, style: Theme.of(context).textTheme.titleLarge), // Theme.of(context) is used to access the theme of the current context
         ),
         Container(
           padding: const EdgeInsets.fromLTRB(_hPadding, 10.0, _hPadding, 4.0),
-          child: Text(_body),
+          child: Text(_body, style: Theme.of(context).textTheme.bodyMedium),
         ),
       ],
     );
