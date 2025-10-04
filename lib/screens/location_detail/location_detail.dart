@@ -24,7 +24,7 @@ class LocationDetail extends StatelessWidget {
         children: [
           ImageBanner(location.imagePath),
           // ... is used to spread the list of TextSection widgets
-          // ...textSections(location),
+          ...textSections(location),
         ],
       ),
     );
@@ -33,7 +33,7 @@ class LocationDetail extends StatelessWidget {
   // This function returns a list of TextSection widgets
   List<Widget> textSections(Location location) {
     // The map function is used to create a list of TextSection widgets
-    // .toList() is used to convert the map to a list (required for the return statement)
+    // .toList() is used to convert the map to a list (since map() returns an iterable and doesn't return a list)
     return location.facts
         .map((fact) => TextSection(fact.title, fact.text))
         .toList();
