@@ -3,6 +3,8 @@ import 'image_banner.dart';
 import 'text_section.dart';
 
 class LocationDetail extends StatelessWidget {
+  const LocationDetail({super.key}); // super.key is used to pass the key to the parent widget
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

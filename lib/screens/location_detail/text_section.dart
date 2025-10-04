@@ -6,7 +6,8 @@ class TextSection extends StatelessWidget {
   final String _body;
   static const double _hPadding = 16.0; // Constant Horizontal Padding (Must be static if it's constant)
 
-  const TextSection(this._title, this._body); // Constructor
+   // Constructor, super.key is used to pass the key to the parent widget (if any)
+  const TextSection(this._title, this._body, {super.key});
 
   @override
   Widget build(BuildContext context) {

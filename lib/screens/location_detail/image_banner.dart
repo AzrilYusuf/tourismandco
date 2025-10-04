@@ -4,7 +4,7 @@ class ImageBanner extends StatelessWidget {
   final String
   _assetPath; // final means the variable can't be changed and _color is private
 
-  const ImageBanner(this._assetPath); // Constructor
+  const ImageBanner(this._assetPath, {super.key}); // Constructor
 
   @override
   Widget build(BuildContext context) {
