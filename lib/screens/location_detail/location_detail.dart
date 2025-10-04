@@ -4,27 +4,29 @@ import 'text_section.dart';
 import '../../models/location.dart';
 
 class LocationDetail extends StatelessWidget {
-  const LocationDetail({
-    super.key,
-  }); // super.key is used to pass the key to the parent widget
+  final int _locationID;
+
+  const LocationDetail(
+    this._locationID, {
+    super.key, // super.key is used to pass the key to the parent widget
+  });
 
   @override
   Widget build(BuildContext context) {
-    final locations = Location.fetchAll();
-    final location = locations.first;
+    final Location detailedLocation = Location.fetchByID(_locationID);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(location.name),
+        title: Text(detailedLocation.name),
         backgroundColor: Colors.blueAccent,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ImageBanner(location.imagePath),
+          ImageBanner(detailedLocation.imagePath),
           // ... is used to spread the list of TextSection widgets
-          ...textSections(location),
+          ...textSections(detailedLocation),
         ],
       ),
     );
